@@ -342,6 +342,7 @@ bool binary_search(RandomIt b, RandomIt e, const X &x) {
     else
       return true;
   }
+  return false;
 }
 
 /*!
