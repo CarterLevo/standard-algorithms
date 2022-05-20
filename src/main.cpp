@@ -22,6 +22,7 @@ int main(int argc, char *argv[]) {
   test_remove_if();
   test_partition();
   test_reverse();
+  test_accumulate();
   test_for_each();
   test_binary_search();
   test_swap();
