@@ -19,6 +19,14 @@ The tests can be easily compiled on the command line like so:
 ``` shell
   $ g++ -Wall -std=c++98 main.cpp test.cpp -o test
 ```
+The resulting executable can be run like so:
+
+``` shell
+  $ ./test
+```
+
+If all the results print without triggering an assertion error, then all the
+tests have passed!
 
 This code is distributed under the GPL version 3.0. See the LICENSE file for
 more details.
