@@ -1,4 +1,4 @@
-/**
+/*!
  * @file: algs.h
  * @brief: header file defining interface for some template algorithms
  * @author: Carter S. Levinson <cslevo@posteo.net>
@@ -7,7 +7,7 @@
 #ifndef ALGS_H
 #define ALGS_H
 
-/**
+/*!
  * Test two sequences of the same length for equality.
  *
  * @param b1 input iter marking the beginning of the first sequence
@@ -19,7 +19,7 @@
 template <class InputIt>
 bool equal(InputIt b1, InputIt e, InputIt b2);
 
-/**
+/*!
  * Searches the sequence [b,e) for the element x
  *
  * @param b input iter marking the beginning of the sequence
@@ -31,7 +31,7 @@ bool equal(InputIt b1, InputIt e, InputIt b2);
 template <class InputIt, class X>
 InputIt find(InputIt b, InputIt e, const X& x);
 
-/**
+/*!
  * Recursively searches the sequence [b,e) for the element x
  *
  * @param b input iter marking the beginning of the sequence
@@ -43,7 +43,7 @@ InputIt find(InputIt b, InputIt e, const X& x);
 template <class InputIt, class X>
 InputIt rfind(InputIt b, InputIt e, const X& x);
 
-/**
+/*!
  * Searches the sequence [b,e) for the first element where predicate p is true
  *
  * @param b input iter marking the beginning of the sequence
@@ -56,7 +56,7 @@ InputIt rfind(InputIt b, InputIt e, const X& x);
 template <class InputIt, class UnaryPred>
 InputIt find_if(InputIt b, InputIt e, UnaryPred p);
 
-/**
+/*!
  * Searches the sequence [b1,e1) for possibly different sized sequence b2,e2)
  *
  * @param b1 forward iter marking beginning of the first sequence
@@ -70,7 +70,7 @@ InputIt find_if(InputIt b, InputIt e, UnaryPred p);
 template <class ForwardIt>
 ForwardIt search(ForwardIt b1, ForwardIt e1, ForwardIt b2, ForwardIt e2);
 
-/**
+/*!
  * Copies the entire sequence [b,e) to d
  *
  * @param b input iter marking the beginning of source sequence
@@ -82,7 +82,7 @@ ForwardIt search(ForwardIt b1, ForwardIt e1, ForwardIt b2, ForwardIt e2);
 template <class InputIt, class OutputIt>
 OutputIt copy(InputIt b, InputIt e, OutputIt d);
 
-/**
+/*!
  * Copies all elements in the sequence [b,e) not equal to x into the destination
  * sequence
  *
@@ -96,7 +96,7 @@ OutputIt copy(InputIt b, InputIt e, OutputIt d);
 template <class InputIt, class OutputIt, class X>
 OutputIt remove_copy(InputIt b, InputIt e, OutputIt d, const X& x);
 
-/**
+/*!
  * Copies all elements x such that p(x) == false into the destination sequence
  *
  * @param b input iter marking the beginning of the source sequence
@@ -109,7 +109,7 @@ OutputIt remove_copy(InputIt b, InputIt e, OutputIt d, const X& x);
 template <class InputIt, class OutputIt, class UnaryPred>
 OutputIt remove_copy_if(InputIt b, InputIt e, OutputIt d, UnaryPred p);
 
-/**
+/*!
  * Alters sequece of range [b,e) into one with all values that compare equal to
  * x removed
  *
@@ -124,7 +124,7 @@ OutputIt remove_copy_if(InputIt b, InputIt e, OutputIt d, UnaryPred p);
 template <class ForwardIt, class X>
 ForwardIt remove(ForwardIt b, ForwardIt e, const X& x);
 
-/**
+/*!
  * Alters the sequence of range [b,e) into one where all values where predicate
  * p returns true are removed
  *
@@ -137,7 +137,7 @@ ForwardIt remove(ForwardIt b, ForwardIt e, const X& x);
 template <class ForwardIt, class UnaryPred>
 ForwardIt remove_if(ForwardIt b, ForwardIt e, UnaryPred p);
 
-/**
+/*!
  * Replaces all occurrences of x in the sequence [b,e) with y
  *
  * @param b forward iter marking the beginning of the sequence
@@ -148,7 +148,7 @@ ForwardIt remove_if(ForwardIt b, ForwardIt e, UnaryPred p);
 template <class ForwardIt, class X>
 void replace(ForwardIt b, ForwardIt e, const X& x, const X& y);
 
-/*
+/*!
  * Transform sequence delimited by [b,e) such that all elements where prediated
  * p returns false are placed in the front of the sequence
  *
@@ -161,7 +161,7 @@ void replace(ForwardIt b, ForwardIt e, const X& x, const X& y);
 template <class BidirectionalIt, class UnaryPred>
 BidirectionalIt partition(BidirectionalIt b, BidirectionalIt e, UnaryPred p);
 
-/**
+/*!
  * Reverse the order of sequence [b,e)
  *
  * @param b iter marking the beginning of the sequence
@@ -170,7 +170,7 @@ BidirectionalIt partition(BidirectionalIt b, BidirectionalIt e, UnaryPred p);
 template <class BidirectionalIt>
 void reverse(BidirectionalIt b, BidirectionalIt e);
 
-/**
+/*!
  * Gathers the sum of sequence [b,e) into Accumulator a
  *
  * @param b iter marking the beginning of the sequence
@@ -183,19 +183,19 @@ void reverse(BidirectionalIt b, BidirectionalIt e);
 template <class InputIt, class Accumulator>
 Accumulator accumulate(InputIt b, InputIt e, Accumulator a);
 
-/**
+/*!
  * Applies the function f to each element in the sequence [b,e)
  *
  * @param b input iter marking the beginning of the sequence
  * @param e input iter marking the end of the sequence
  * @param f function to be apllied to each element
  *
- * @returns the function f
+ * @returns function f
  */
 template <class InputIt, class Function>
 Function for_each(InputIt b, InputIt e, Function f);
 
-/**
+/*!
  * Performs simple binary search on sequence [b,e)
  *
  * @param b iter marking the beginning of the sequence
@@ -207,7 +207,7 @@ Function for_each(InputIt b, InputIt e, Function f);
 template <class RandomIt, class X>
 bool binary_search(RandomIt b, RandomIt e, const X& x);
 
-/**
+/*!
  * Swaps the values of two generic elements x and y
  *
  * @param x reference to first value
@@ -216,7 +216,7 @@ bool binary_search(RandomIt b, RandomIt e, const X& x);
 template <class X>
 void swap(X& x, X& y);
 
-/**
+/*!
  * Find the maximum of two generic elements
  *
  * @param x constant reference to the first value
@@ -227,7 +227,7 @@ void swap(X& x, X& y);
 template <class X>
 X max(const X& x, const X& y);
 
-/**
+/*!
  * Find the minimum of two generic elements
  *
  * @param x constant reference to the first value

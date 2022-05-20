@@ -1,4 +1,4 @@
-/**
+/*!
  * @file: algs.cpp
  * @brief: implementation of several standard style template algorithms
  * @author: Carter S. Levinson <cslevo@posteo.net>
@@ -183,7 +183,7 @@ void swap(X& x, X& y) {
 template <class RandomIt, class X>
 bool binary_search(RandomIt b, RandomIt e, const X& x) {
   while (b < e) {
-    // need to use this equation to avoid the possibilility of overflow
+    // this calculation of mid avoids integer overflow
     RandomIt mid = b + (e - b) / 2;
     if (x < *mid)
       e = mid;
