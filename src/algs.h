@@ -235,5 +235,5 @@ template <class X> X max(const X &x, const X &y);
  * @returns the smaller of the two elements
  */
 template <class X> X min(const X &x, const X &y);
-} /* namespace algs */
+} /* end namespace algs */
 #endif /* ifndef ALGS_H */
