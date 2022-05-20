@@ -14,7 +14,7 @@
  * @param e  input iter marking the end of the first sequence
  * @param b2 input iter marking the beginning of the second sequence
  *
- * @return true if the sequences match, false otherwise
+ * @returns true if the sequences match, false otherwise
  */
 template <class InputIt>
 bool equal(InputIt b1, InputIt e, InputIt b2);
@@ -26,7 +26,7 @@ bool equal(InputIt b1, InputIt e, InputIt b2);
  * @param e input iter marking the end of the sequence
  * @param x constant reference to target value
  *
- * @return iter marking the element, iter equal to e if not found
+ * @returns an inpu iter marking the element, iter equal to e if not found
  */
 template <class InputIt, class X>
 InputIt find(InputIt b, InputIt e, const X& x);
@@ -38,7 +38,7 @@ InputIt find(InputIt b, InputIt e, const X& x);
  * @param e input iter marking the end of the sequence
  * @param x constant reference to target value
  *
- * @return input iter marking the element, iter equal to e if not found
+ * @returns an input iter marking the element, iter equal to e if not found
  */
 template <class InputIt, class X>
 InputIt rfind(InputIt b, InputIt e, const X& x);
@@ -50,8 +50,8 @@ InputIt rfind(InputIt b, InputIt e, const X& x);
  * @param e input iter marking the end of the sequence
  * @param p a unary predicate function
  *
- * @return input iter marking the first elem x where p(x) == true, or e if not
- * found
+ * @returns an input iter marking the first elem x where p(x) == true, or e if 
+ * not found
  */
 template <class InputIt, class UnaryPred>
 InputIt find_if(InputIt b, InputIt e, UnaryPred p);
@@ -64,7 +64,7 @@ InputIt find_if(InputIt b, InputIt e, UnaryPred p);
  * @param b2 forward iter marking the beginning of the second sequence
  * @param e2 forward iter marking the end of the second sequence
  *
- * @return forward iter marking the occurence of the second sequence in the
+ * @returns a forward iter marking the occurence of the second sequence in the
  * first, or e2 if not found
  */
 template <class ForwardIt>
@@ -77,7 +77,7 @@ ForwardIt search(ForwardIt b1, ForwardIt e1, ForwardIt b2, ForwardIt e2);
  * @param e input iter marking the end of source sequence
  * @param d output iter marking beginning of destination sequence
  *
- * @return iter pointing to beginning of copied sequence
+ * @returns an output iter pointing to beginning of copied sequence
  */
 template <class InputIt, class OutputIt>
 OutputIt copy(InputIt b, InputIt e, OutputIt d);
@@ -91,7 +91,7 @@ OutputIt copy(InputIt b, InputIt e, OutputIt d);
  * @param d output iter marking the beginning of destination sequence
  * @param x constant reference to target value for comparison
  *
- * @return output iter marking beginning of copied sequence
+ * @returns an output iter marking beginning of copied sequence
  */
 template <class InputIt, class OutputIt, class X>
 OutputIt remove_copy(InputIt b, InputIt e, OutputIt d, const X& x);
@@ -117,8 +117,9 @@ OutputIt remove_copy_if(InputIt b, InputIt e, OutputIt d, UnaryPred p);
  * @param e forward iter marking the end of the sequence
  * @param x target value to be removed from sequence
  *
- * @return iterator to the new beginning of the sequence, alternatively the
- * iterator marks the new one past-the-end of the removed sequence
+ * @returns a forward iterator to the new beginning of the sequence, 
+ * alternatively the iterator marks the new one past-the-end of the removed 
+ * sequence
  */
 template <class ForwardIt, class X>
 ForwardIt remove(ForwardIt b, ForwardIt e, const X& x);
@@ -131,7 +132,7 @@ ForwardIt remove(ForwardIt b, ForwardIt e, const X& x);
  * @param e forward iter marking the end of the sequence
  * @param p unary predicate function
  *
- * @return forward iter marking the new of the range
+ * @returns a forward iter marking the new of the range
  */
 template <class ForwardIt, class UnaryPred>
 ForwardIt remove_if(ForwardIt b, ForwardIt e, UnaryPred p);
@@ -155,7 +156,7 @@ void replace(ForwardIt b, ForwardIt e, const X& x, const X& y);
  * @param e bidirectional iter marking the end of the sequence
  * @param p unary predicate function
  *
- * @return bidirectional iter pointing to first element of second partition
+ * @returns a bidirectional iter pointing to first element of second partition
  */
 template <class BidirectionalIt, class UnaryPred>
 BidirectionalIt partition(BidirectionalIt b, BidirectionalIt e, UnaryPred p);
@@ -176,8 +177,8 @@ void reverse(BidirectionalIt b, BidirectionalIt e);
  * @param e iter marking the end of the sequence
  * @param a accumulator holding the sum of the sequence
  *
- * @return value of same type as the accumulator containing sum of the sequence
- * plus its initial value
+ * @returns the value of same type as the accumulator containing sum of the 
+ * sequence plus its initial value
  */
 template <class InputIt, class Accumulator>
 Accumulator accumulate(InputIt b, InputIt e, Accumulator a);
@@ -189,7 +190,7 @@ Accumulator accumulate(InputIt b, InputIt e, Accumulator a);
  * @param e input iter marking the end of the sequence
  * @param f function to be apllied to each element
  *
- * @return the function f
+ * @returns the function f
  */
 template <class InputIt, class Function>
 Function for_each(InputIt b, InputIt e, Function f);
@@ -201,7 +202,7 @@ Function for_each(InputIt b, InputIt e, Function f);
  * @param e iter marking the end of the sequence
  * @param x target value for search
  *
- * @return true if target value was found, otherwise false
+ * @returns true if target value was found, otherwise false
  */
 template <class RandomIt, class X>
 bool binary_search(RandomIt b, RandomIt e, const X& x);
@@ -222,7 +223,7 @@ void swap(X& x, X& y);
  * @param x constant reference to the first value
  * @param y constant reference to the second value
  *
- * @return the larger of the two elements
+ * @returns the larger of the two elements
  */
 template <class X>
 X max(const X& x, const X& y);
@@ -233,7 +234,7 @@ X max(const X& x, const X& y);
  * @param x constant reference to the first value
  * @param y constant reference to the second value
  *
- * @return the smaller of the two elements
+ * @returns the smaller of the two elements
  */
 template <class X>
 X min(const X& x, const X& y);
