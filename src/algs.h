@@ -206,7 +206,6 @@ Function for_each(InputIt b, InputIt e, Function f);
  */
 template <class RandomIt, class X>
 bool binary_search(RandomIt b, RandomIt e, const X& x);
-#endif
 
 /**
  * Swaps the values of two generic elements x and y
@@ -238,3 +237,4 @@ X max(const X& x, const X& y);
  */
 template <class X>
 X min(const X& x, const X& y);
+#endif /* ifndef ALGS_H */
