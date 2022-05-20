@@ -377,5 +377,5 @@ template <class X> X max(const X &x, const X &y) { return x > y ? x : y; }
  */
 template <class X> X min(const X &x, const X &y) { return x < y ? x : y; }
 
-} /* end namespace algs */
+} /* namespace algs */
 #endif /* ifndef ALGS_H */
