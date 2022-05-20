@@ -17,7 +17,7 @@ header.
 The tests can be easily compiled on the command line like so:
 
 ``` shell
-  $ g++ -Wall -std=c++98 main.cpp test.cpp algs.cpp -o test
+  $ g++ -Wall -std=c++98 main.cpp test.cpp -o test
 ```
 
 This code is distributed under the GPL version 3.0. See the LICENSE file for
