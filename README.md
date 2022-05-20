@@ -14,15 +14,10 @@ with doxygen style documenation comments so that one is free to to include the
 algorithms and compare them to the implementations in the standard <algorithm>
 header.
 
-The testing code makes use of some C++11 features such as auto type detection
-and brace initialization, so compilation of the test code requires a C++11
-compiler. However, the header file itself is minimal and can be compiled using
-only a C++98 compiler. 
-
 The tests can be easily compiled on the command line like so:
 
 ``` shell
-  $ g++ -Wall -std=c++11 main.cpp test.cpp algs.cpp -o test
+  $ g++ -Wall -std=c++98 main.cpp test.cpp algs.cpp -o test
 ```
 
 This code is distributed under the GPL version 3.0. See the LICENSE file for
