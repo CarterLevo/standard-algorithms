@@ -58,7 +58,7 @@ template <class InputIt, class UnaryPred>
 InputIt find_if(InputIt b, InputIt e, UnaryPred p);
 
 /*!
- * Searches the sequence [b1,e1) for possibly different sized sequence b2,e2)
+ * Searches the sequence [b1,e1) for possibly different sized sequence [b2,e2)
  *
  * @param b1 forward iter marking beginning of the first sequence
  * @param e1 forward iter marking the end of the first sequence
