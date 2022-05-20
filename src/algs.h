@@ -7,6 +7,8 @@
 #ifndef ALGS_H
 #define ALGS_H
 
+namespace algs {
+
 /*!
  * Test two sequences of the same length for equality.
  *
@@ -16,8 +18,7 @@
  *
  * @returns true if the sequences match, false otherwise
  */
-template <class InputIt>
-bool equal(InputIt b1, InputIt e, InputIt b2);
+template <class InputIt> bool equal(InputIt b1, InputIt e, InputIt b2);
 
 /*!
  * Searches the sequence [b,e) for the element x
@@ -29,7 +30,7 @@ bool equal(InputIt b1, InputIt e, InputIt b2);
  * @returns an inpu iter marking the element, iter equal to e if not found
  */
 template <class InputIt, class X>
-InputIt find(InputIt b, InputIt e, const X& x);
+InputIt find(InputIt b, InputIt e, const X &x);
 
 /*!
  * Recursively searches the sequence [b,e) for the element x
@@ -41,7 +42,7 @@ InputIt find(InputIt b, InputIt e, const X& x);
  * @returns an input iter marking the element, iter equal to e if not found
  */
 template <class InputIt, class X>
-InputIt rfind(InputIt b, InputIt e, const X& x);
+InputIt rfind(InputIt b, InputIt e, const X &x);
 
 /*!
  * Searches the sequence [b,e) for the first element where predicate p is true
@@ -50,7 +51,7 @@ InputIt rfind(InputIt b, InputIt e, const X& x);
  * @param e input iter marking the end of the sequence
  * @param p a unary predicate function
  *
- * @returns an input iter marking the first elem x where p(x) == true, or e if 
+ * @returns an input iter marking the first elem x where p(x) == true, or e if
  * not found
  */
 template <class InputIt, class UnaryPred>
@@ -94,7 +95,7 @@ OutputIt copy(InputIt b, InputIt e, OutputIt d);
  * @returns an output iter marking beginning of copied sequence
  */
 template <class InputIt, class OutputIt, class X>
-OutputIt remove_copy(InputIt b, InputIt e, OutputIt d, const X& x);
+OutputIt remove_copy(InputIt b, InputIt e, OutputIt d, const X &x);
 
 /*!
  * Copies all elements x such that p(x) == false into the destination sequence
@@ -117,12 +118,12 @@ OutputIt remove_copy_if(InputIt b, InputIt e, OutputIt d, UnaryPred p);
  * @param e forward iter marking the end of the sequence
  * @param x target value to be removed from sequence
  *
- * @returns a forward iterator to the new beginning of the sequence, 
- * alternatively the iterator marks the new one past-the-end of the removed 
+ * @returns a forward iterator to the new beginning of the sequence,
+ * alternatively the iterator marks the new one past-the-end of the removed
  * sequence
  */
 template <class ForwardIt, class X>
-ForwardIt remove(ForwardIt b, ForwardIt e, const X& x);
+ForwardIt remove(ForwardIt b, ForwardIt e, const X &x);
 
 /*!
  * Alters the sequence of range [b,e) into one where all values where predicate
@@ -146,7 +147,7 @@ ForwardIt remove_if(ForwardIt b, ForwardIt e, UnaryPred p);
  * @param y const reference to replacement value
  */
 template <class ForwardIt, class X>
-void replace(ForwardIt b, ForwardIt e, const X& x, const X& y);
+void replace(ForwardIt b, ForwardIt e, const X &x, const X &y);
 
 /*!
  * Transform sequence delimited by [b,e) such that all elements where prediated
@@ -177,7 +178,7 @@ void reverse(BidirectionalIt b, BidirectionalIt e);
  * @param e iter marking the end of the sequence
  * @param a accumulator holding the sum of the sequence
  *
- * @returns the value of same type as the accumulator containing sum of the 
+ * @returns the value of same type as the accumulator containing sum of the
  * sequence plus its initial value
  */
 template <class InputIt, class Accumulator>
@@ -205,7 +206,7 @@ Function for_each(InputIt b, InputIt e, Function f);
  * @returns true if target value was found, otherwise false
  */
 template <class RandomIt, class X>
-bool binary_search(RandomIt b, RandomIt e, const X& x);
+bool binary_search(RandomIt b, RandomIt e, const X &x);
 
 /*!
  * Swaps the values of two generic elements x and y
@@ -213,8 +214,7 @@ bool binary_search(RandomIt b, RandomIt e, const X& x);
  * @param x reference to first value
  * @param y reference to second value
  */
-template <class X>
-void swap(X& x, X& y);
+template <class X> void swap(X &x, X &y);
 
 /*!
  * Find the maximum of two generic elements
@@ -224,8 +224,7 @@ void swap(X& x, X& y);
  *
  * @returns the larger of the two elements
  */
-template <class X>
-X max(const X& x, const X& y);
+template <class X> X max(const X &x, const X &y);
 
 /*!
  * Find the minimum of two generic elements
@@ -235,6 +234,6 @@ X max(const X& x, const X& y);
  *
  * @returns the smaller of the two elements
  */
-template <class X>
-X min(const X& x, const X& y);
+template <class X> X min(const X &x, const X &y);
+} /* namespace algs */
 #endif /* ifndef ALGS_H */

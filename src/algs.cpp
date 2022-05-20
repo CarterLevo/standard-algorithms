@@ -20,6 +20,7 @@
  */
 
 #include "algs.h"
+using namespace algs;
 
 template <class InputIt, class Function>
 Function for_each(InputIt b, InputIt e, Function f) {
