@@ -43,5 +43,7 @@ void test_max();
 
 void test_min();
 
-void initialize_tests();
+void initialize_test();
+
+void destroy_test();
 #endif /* ifndef TEST_H */
