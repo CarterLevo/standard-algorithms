@@ -42,4 +42,6 @@ void test_swap();
 void test_max();
 
 void test_min();
+
+void initialize_tests();
 #endif /* ifndef TEST_H */

@@ -10,6 +10,7 @@
 
 int main() {
   std::cout << "Running the test suite for algs.h..." << std::endl;
+  initialize_tests();
   std::cout << "Testing the equal() function..." << std::endl;
   test_equal();
   std::cout << "Testing the find() function..." << std::endl;
