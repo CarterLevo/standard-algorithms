@@ -11,7 +11,7 @@ of the conventions in the standard library came from.
 A small testing file test.cpp is provided and can be easily compiled using the
 command line. However, all the functions are neatly contained in a header file
 with doxygen style documenation comments so that one is free to to include the
-algorithms and compare them to the implementations in the standard <algorithms>
+algorithms and compare them to the implementations in the standard <algorithm>
 header.
 
 This code is distributed under the GPL version 3.0. See the LICENSE file for
