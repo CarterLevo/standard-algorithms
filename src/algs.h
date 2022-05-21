@@ -272,6 +272,19 @@ BidirectionalIt partition(BidirectionalIt b, BidirectionalIt e, UnaryPred p) {
 }
 
 /*!
+ * Swaps the values of two generic elements x and y
+ *
+ * @param x reference to first value
+ * @param y reference to second value
+ */
+template <class X> void swap(X &x, X &y) {
+  X t = x;
+  x = y;
+  y = t;
+}
+
+
+/*!
  * Reverse the order of sequence [b,e)
  *
  * @param b iter marking the beginning of the sequence
@@ -297,7 +310,7 @@ void reverse(BidirectionalIt b, BidirectionalIt e) {
  * sequence plus its initial value
  */
 template <class InputIt, class Accumulator>
-Accumulator accumulate(InputIt b, InputIt e, Accumulator a) {
+Accumulator accumulate(InputIt b, InputIt e, Accumulator &a) {
   while (b != e)
     a += *b++;
   return a;
@@ -343,18 +356,6 @@ bool binary_search(RandomIt b, RandomIt e, const X &x) {
       return true;
   }
   return false;
-}
-
-/*!
- * Swaps the values of two generic elements x and y
- *
- * @param x reference to first value
- * @param y reference to second value
- */
-template <class X> void swap(X &x, X &y) {
-  X t = x;
-  x = y;
-  y = t;
 }
 
 /*!
